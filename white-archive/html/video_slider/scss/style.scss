@@ -1,0 +1,96 @@
+@import "compass/css3";
+
+body, html{
+  background:#2e3941;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+
+.wrapper {
+  position:absolute;
+  top:0;bottom:0;right:0;left:0;
+  margin:auto;
+}
+
+.nav {
+   width: 100px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  z-index:2;
+  bottom: 0;
+  left: 50%;
+  border:1px solid #fff;
+  @include transition(all 1s ease);
+  transform: translate(-50%,-50%);
+  top:50%;
+  button#main-btn {
+    background:transparent;
+    border:0;
+    padding:10px;
+    width:100px;
+    height:50px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    @include transition(all 0.5s ease);
+    color:#fff;
+    font-family:paytone one;
+    top:0;
+    bottom:0;
+    @include border-radius(10px);  
+    font-size:12px;
+    transform-origin : middle;
+    &:hover {
+      @include transform(scale(1.5));
+      // text-shadow:0px 5px 5px rgba(0,0,0,0.2);
+    }
+    &:focus { 
+      outline:none
+    }
+  }
+  
+  #sub-navs{
+    button{
+      background:transparent;
+      width:100px;
+      height:50px;
+      border:0;
+      position:absolute;
+      left:0;
+      right:0;
+      margin:auto;
+      transition: all 1s ease,  scale 0.5s ease, transform 0.5s ease;
+      font-family:paytone one;
+      top:0;
+      bottom:0;
+      opacity:0;
+      @include border-radius(10px);
+      font-size:12px;
+      transform-origin : middle;
+      color:#2e3941 !important;
+
+      &:hover {
+        @include transform(scale(1.5));
+        // text-shadow:0px 4px 5px rgba(0,0,0,0.3);
+      }
+      &:focus { 
+        outline:none
+      }
+    }
+  }
+}
+a {
+  color:#fff;
+  text-decoration:none;
+}
+.content {
+  width:65%;
+  background:#fff;
+  height:100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
